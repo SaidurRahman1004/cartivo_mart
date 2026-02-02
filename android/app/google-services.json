@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "392713519683",
+    "project_id": "cartivo-ecomarce",
+    "storage_bucket": "cartivo-ecomarce.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:392713519683:android:f04d5b208cd1df78c98af6",
+        "android_client_info": {
+          "package_name": "com.example.cartivo_mart"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAAWTJFz-8Ab8jsXZwYRc8yf04fQc3nOM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
