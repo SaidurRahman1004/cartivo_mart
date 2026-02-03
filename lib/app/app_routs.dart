@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import '../auth/presentation/screens/splash_screen.dart';
 
 class AppRouts {
