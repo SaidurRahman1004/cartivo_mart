@@ -1,4 +1,5 @@
 import 'package:cartivo_mart/app/providers/language_provider.dart';
+import 'package:cartivo_mart/app/providers/theme_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
@@ -13,9 +14,10 @@ class CartivoApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_)=> LanguageProvider()),
+        ChangeNotifierProvider(create: (_) => ThemeProvider()),
       ],
-      child: Consumer<LanguageProvider>(
-        builder: (context,languageProvider, child) {
+      child: Consumer2<LanguageProvider,ThemeProvider>(
+        builder: (context,languageProvider, themeProvider,child) {
           return MaterialApp(
             locale: languageProvider.currentLocale,
             supportedLocales: languageProvider.supportedLocale,
@@ -28,7 +30,9 @@ class CartivoApp extends StatelessWidget {
             debugShowCheckedModeBanner: false,
             initialRoute: '/',
             onGenerateRoute: AppRouts.onGenerateRoute,
-            theme: AppTheme.darkTheme,
+            themeMode: themeProvider.themeMode,
+            theme: AppTheme.lightTheme,
+            darkTheme: AppTheme.darkTheme,
           );
         }
       ),
