@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pin_code_fields/pin_code_fields.dart';
 
 import 'app_colors.dart';
 
@@ -61,7 +62,19 @@ class AppTheme {
       ),
     );
   }
-
+//Pincode Theme
+  static PinTheme get otpPinTheme => PinTheme(
+    shape: PinCodeFieldShape.box,
+    borderRadius: BorderRadius.circular(8),
+    fieldHeight: 50,
+    fieldWidth: 50,
+    activeFillColor: Colors.white,
+    inactiveFillColor: Colors.white,
+    selectedFillColor: Colors.white,
+    activeColor: AppColors.themeColor,
+    inactiveColor: Colors.grey.shade300,
+    selectedColor: AppColors.themeColor,
+  );
 
   static ThemeData get lightTheme => _lightTheme;
 

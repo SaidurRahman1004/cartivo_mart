@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../../app/extensions/utils_extension.dart';
 import '../../../shared/utils/validators.dart';
 import '../widgets/app_logo.dart';
+import 'otp_screen.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -94,6 +95,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     onPressed: _onTapSignUpButton,
                     child: const Text('Sign Up'),
                   ),
+                  const SizedBox(height: 20,),
+                  TextButton(onPressed: (){
+                    Navigator.pushReplacementNamed(context, OtpScreen.name);
+                  }, child: Text(' Otp Page')),
                 ],
               ),
             ),

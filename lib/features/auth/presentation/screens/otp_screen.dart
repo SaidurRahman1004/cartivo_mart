@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:cartivo_mart/app/app_colors.dart';
+import 'package:cartivo_mart/app/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import '../../../../app/extensions/utils_extension.dart';
@@ -7,6 +8,7 @@ import '../widgets/app_logo.dart';
 
 class OtpScreen extends StatefulWidget {
   const OtpScreen({super.key});
+  static const String name = '/otp';
 
   @override
   State<OtpScreen> createState() => _OtpScreenState();
@@ -35,6 +37,11 @@ class _OtpScreenState extends State<OtpScreen> {
         });
       }
     });
+  }
+  @override
+  void initState() {
+    super.initState();
+    startTimer();
   }
 
   @override
@@ -65,18 +72,7 @@ class _OtpScreenState extends State<OtpScreen> {
                   length: 4,
                   keyboardType: TextInputType.number,
                   animationType: AnimationType.fade,
-                  pinTheme: PinTheme(
-                    shape: PinCodeFieldShape.box,
-                    borderRadius: BorderRadius.circular(5),
-                    fieldHeight: 50,
-                    fieldWidth: 50,
-                    activeFillColor: Colors.white,
-                    inactiveFillColor: Colors.white,
-                    selectedFillColor: Colors.white,
-                    activeColor: AppColors.themeColor,
-                    inactiveColor: Colors.grey.shade300,
-                    selectedColor: AppColors.themeColor,
-                  ),
+                  pinTheme: AppTheme.otpPinTheme,
                   animationDuration: const Duration(milliseconds: 300),
                   enableActiveFill: true,
                   onCompleted: (v) {},

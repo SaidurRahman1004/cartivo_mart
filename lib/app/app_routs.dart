@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../features/auth/presentation/screens/otp_screen.dart';
 import '../features/auth/presentation/screens/sign_up_screen.dart';
 import '../features/auth/presentation/screens/splash_screen.dart';
 
@@ -16,6 +17,9 @@ class AppRouts {
         break;
       case SignUpScreen.name:
         widget = const SignUpScreen();
+        break;
+      case OtpScreen.name:
+        widget = const OtpScreen();
         break;
 
 
