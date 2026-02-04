@@ -22,12 +22,14 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Expanded(child: AppLogo(height: 120,)),
-            CircularProgressIndicator(),
-          ],
+        child: Center(
+          child: Column(
+            children: [
+              Expanded(child: AppLogo(height: 120,)),
+              CircularProgressIndicator(),
+              const SizedBox(height: 20,)
+            ],
+          ),
         ),
       ),
     );
