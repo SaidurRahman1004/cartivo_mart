@@ -83,6 +83,7 @@ class _OtpScreenState extends State<OtpScreen> {
                   onPressed: _onTapNextButton,
                   child: const Text('Next'),
                 ),
+                const SizedBox(height: 15,),
                 RichText(
                   text: TextSpan(
                     style: const TextStyle(color: Colors.grey),
