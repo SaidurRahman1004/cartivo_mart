@@ -1,6 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../auth/presentation/screens/splash_screen.dart';
+
+import '../features/auth/presentation/screens/sign_up_screen.dart';
+import '../features/auth/presentation/screens/splash_screen.dart';
+
 
 class AppRouts {
   static Route<dynamic>? onGenerateRoute(RouteSettings settings){
@@ -8,9 +11,13 @@ class AppRouts {
     Widget widget = SizedBox();
     //settings.name  contains the route name passed in Navigator.pushNamed where we navigate to
     switch (settings.name){
-      case '/' :
-      widget = const SplashScreen();
-      break;
+      case SplashScreen.name:
+        widget = const SplashScreen();
+        break;
+      case SignUpScreen.name:
+        widget = const SignUpScreen();
+        break;
+
 
     }
     //Return the page route with the selected widget

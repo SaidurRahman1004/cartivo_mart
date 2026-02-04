@@ -1,10 +1,13 @@
+D:\CodesApplication\Flutter Projects\cartivo_mart\lib\features\auth\presentation\screens\splash_screen.dart
+02/Feb/2026
+Dark and Light Theme and Language Selection in Splash Screen
+......................................................
 import 'package:cartivo_mart/app/extensions/localization_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../../../app/providers/language_provider.dart';
-import '../../../app/providers/theme_provider.dart';
-
+import '../../../../app/providers/language_provider.dart';
+import '../../../../app/providers/theme_provider.dart';
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
@@ -22,7 +25,7 @@ class _SplashScreenState extends State<SplashScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const Spacer(),
-          Image.asset('assets/images/logoApp.png', height: 120),
+          Image.asset('assets/images/ApplogoE.png', height: 120),
           Text(
             context.l10.welcome,
             style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
@@ -91,3 +94,4 @@ class _SplashScreenState extends State<SplashScreen> {
     );
   }
 }
+.....................................................................
