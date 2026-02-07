@@ -96,6 +96,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     child: const Text('Sign Up'),
                   ),
                   const SizedBox(height: 20,),
+                  //Temporary
                   TextButton(onPressed: (){
                     Navigator.pushReplacementNamed(context, OtpScreen.name);
                   }, child: Text(' Otp Page')),

@@ -1,10 +1,9 @@
-import 'dart:async';
-import 'package:cartivo_mart/app/app_colors.dart';
 import 'package:cartivo_mart/app/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import '../../../../app/extensions/utils_extension.dart';
 import '../widgets/app_logo.dart';
+import '../widgets/resend_otp_section.dart';
 
 class OtpScreen extends StatefulWidget {
   const OtpScreen({super.key});
@@ -17,32 +16,6 @@ class OtpScreen extends StatefulWidget {
 class _OtpScreenState extends State<OtpScreen> {
   final TextEditingController _otpTEController = TextEditingController();
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-
-  late Timer _timer;
-  int _start = 120;
-  bool _canResend = false;
-
-  void startTimer() {
-    _canResend = false;
-    _start = 120;
-    _timer = Timer.periodic(const Duration(seconds: 1), (Timer timer) {
-      if (_start == 0) {
-        setState(() {
-          _canResend = true;
-        });
-        timer.cancel();
-      } else {
-        setState(() {
-          _start--;
-        });
-      }
-    });
-  }
-  @override
-  void initState() {
-    super.initState();
-    startTimer();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -84,32 +57,8 @@ class _OtpScreenState extends State<OtpScreen> {
                   child: const Text('Next'),
                 ),
                 const SizedBox(height: 15,),
-                RichText(
-                  text: TextSpan(
-                    style: const TextStyle(color: Colors.grey),
-                    children: [
-                      const TextSpan(text: 'This code will expire in '),
-                      TextSpan(
-                        text:
-                            '$_start'
-                            's',
-                        style: const TextStyle(
-                          color: AppColors.themeColor,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                TextButton(
-                  onPressed: _canResend ? _onTapResendCode : null,
-                  child: Text(
-                    'Resend Code',
-                    style: TextStyle(
-                      color: _canResend ? AppColors.themeColor : Colors.grey,
-                    ),
-                  ),
-                ),
+                ResendOtpSection(),
+                const SizedBox(height: 16),
               ],
             ),
           ),
@@ -122,14 +71,4 @@ class _OtpScreenState extends State<OtpScreen> {
     if (_formKey.currentState!.validate()) {}
   }
 
-  void _onTapResendCode() {
-    startTimer();
-  }
-
-  @override
-  void dispose() {
-    _timer.cancel();
-    _otpTEController.dispose();
-    super.dispose();
-  }
 }

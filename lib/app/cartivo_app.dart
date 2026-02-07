@@ -3,6 +3,7 @@ import 'package:cartivo_mart/app/providers/theme_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
+import '../features/shared/presentation/providers/main_nav_provider.dart';
 import 'app_routs.dart';
 import '../l10n/app_localizations.dart';
 import 'app_theme.dart';
@@ -15,6 +16,7 @@ class CartivoApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (_)=> LanguageProvider()),
         ChangeNotifierProvider(create: (_) => ThemeProvider()),
+        ChangeNotifierProvider(create: (context) => MainNavProvider()),
       ],
       child: Consumer2<LanguageProvider,ThemeProvider>(
         builder: (context,languageProvider, themeProvider,child) {

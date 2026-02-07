@@ -70,7 +70,7 @@ class AppTheme {
     fieldWidth: 50,
     activeFillColor: Colors.white,
     inactiveFillColor: Colors.white,
-    selectedFillColor: Colors.white,
+    selectedFillColor: Colors.deepOrange,
     activeColor: AppColors.themeColor,
     inactiveColor: Colors.grey.shade300,
     selectedColor: AppColors.themeColor,
