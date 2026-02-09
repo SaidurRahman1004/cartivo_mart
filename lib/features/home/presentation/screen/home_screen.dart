@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../app/assets_pats.dart';
+import '../widgets/home_category_list.dart';
 import '../widgets/home_slider.dart';
 import '../widgets/section_header.dart';
 
