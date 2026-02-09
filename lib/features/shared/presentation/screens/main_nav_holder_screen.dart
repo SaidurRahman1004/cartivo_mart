@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../app/app_colors.dart';
+import '../../../home/presentation/screen/home_screen.dart';
 import '../providers/main_nav_provider.dart';
 
 class MainNavHolderScreen extends StatelessWidget {
@@ -9,7 +10,7 @@ class MainNavHolderScreen extends StatelessWidget {
 
   static const String name = '/main-nav-holder';
   final List<Widget> _screens = const [
-    Center(child: Text('Home')),
+    HomeScreen(),
     Center(child: Text('Category')),
     Center(child: Text('Cart')),
     Center(child: Text('Profile')),
