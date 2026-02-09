@@ -9,6 +9,7 @@ class CategoryCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: .center,
+      spacing: 4,
       children: [
         Container(
           padding: EdgeInsets.all(16),
