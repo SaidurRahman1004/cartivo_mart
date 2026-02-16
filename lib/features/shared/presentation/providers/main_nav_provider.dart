@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 
 class MainNavProvider extends ChangeNotifier{
   int _selectedIndex = 0;
@@ -6,5 +6,13 @@ class MainNavProvider extends ChangeNotifier{
   void changeSelectedIndex(int index){
     _selectedIndex = index;
     notifyListeners();
+  }
+
+  void moveToCategory() {
+    changeSelectedIndex(1);
+  }
+
+  void backToHome() {
+    changeSelectedIndex(0);
   }
 }

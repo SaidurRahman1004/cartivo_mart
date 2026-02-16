@@ -1,4 +1,4 @@
-import 'package:cartivo_mart/features/shared/presentation/widgets/category_card.dar.dart';
+import 'package:cartivo_mart/features/shared/presentation/widgets/category_card.dart';
 import 'package:flutter/material.dart';
 
 class HomeCategoryList extends StatelessWidget {
