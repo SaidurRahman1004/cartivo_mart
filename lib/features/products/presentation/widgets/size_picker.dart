@@ -31,10 +31,10 @@ class _SizePickerState extends State<SizePicker> {
               child: Container(
                 padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                 margin: .only(right: 8),
-                color: size == _selectedSize ? AppColors.themeColor : Colors.white,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(4),
                   border: Border.all(color: AppColors.themeColor),
+                  color: size == _selectedSize ? AppColors.themeColor : Colors.white,
                 ),
                 child: Text(size),
                   
