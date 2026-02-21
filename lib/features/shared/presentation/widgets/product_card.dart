@@ -1,4 +1,5 @@
 import 'package:cartivo_mart/app/assets_pats.dart';
+import 'package:cartivo_mart/features/products/presentation/screens/product_details_screen.dart';
 import 'package:flutter/material.dart';
 import '../../../../app/app_colors.dart';
 import '../../../../app/constants.dart';

@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import '../../../../app/app_colors.dart';
 import '../../../category/presentation/screens/category_list_screen.dart';
 import '../../../home/presentation/screen/home_screen.dart';
+import '../../../wishlist/presentation/screens/wish_list_screen.dart';
 import '../providers/main_nav_provider.dart';
 
 class MainNavHolderScreen extends StatelessWidget {
@@ -13,7 +14,8 @@ class MainNavHolderScreen extends StatelessWidget {
   final List<Widget> _screens = const [
     HomeScreen(),
       CategoryListScreen(),
-    Center(child: Text('Cart')),
+    SizedBox(),
+     WishListScreen(),
     Center(child: Text('Profile')),
   ];
 
