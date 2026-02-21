@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../app/app_colors.dart';
 import '../../../../app/extensions/utils_extension.dart';
+import '../../../reviews/screens/reviews_screen.dart';
 import '../../../shared/presentation/widgets/inc_dec_button.dart';
 import '../../../shared/presentation/widgets/product_favourite_button.dart';
 import '../../../shared/presentation/widgets/product_rating.dart';
@@ -88,7 +89,9 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                 children: [
                   ProductRating(rating: '4.7'),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, ReviewScreen.name);
+                    },
                     child: Text(
                       'Reviews',
                       style: TextStyle(color: AppColors.themeColor),
