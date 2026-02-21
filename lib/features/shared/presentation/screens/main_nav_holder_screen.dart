@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../app/app_colors.dart';
+import '../../../cart/presentation/screens/cart_screen.dart';
 import '../../../category/presentation/screens/category_list_screen.dart';
 import '../../../home/presentation/screen/home_screen.dart';
 import '../../../wishlist/presentation/screens/wish_list_screen.dart';
@@ -13,10 +14,10 @@ class MainNavHolderScreen extends StatelessWidget {
   static const String name = '/main-nav-holder';
   final List<Widget> _screens = const [
     HomeScreen(),
-      CategoryListScreen(),
-    SizedBox(),
-     WishListScreen(),
-    Center(child: Text('Profile')),
+    CategoryListScreen(),
+    CartScreen(),
+    WishListScreen(),
+
   ];
 
   @override
