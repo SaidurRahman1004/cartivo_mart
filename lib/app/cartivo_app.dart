@@ -9,6 +9,7 @@ import '../l10n/app_localizations.dart';
 import 'app_theme.dart';
 class CartivoApp extends StatelessWidget {
   const CartivoApp({super.key});
+  static  GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
   @override
   Widget build(BuildContext context) {
@@ -21,6 +22,7 @@ class CartivoApp extends StatelessWidget {
       child: Consumer2<LanguageProvider,ThemeProvider>(
         builder: (context,languageProvider, themeProvider,child) {
           return MaterialApp(
+            navigatorKey: navigatorKey,
             locale: languageProvider.currentLocale,
             supportedLocales: languageProvider.supportedLocale,
             localizationsDelegates: [
