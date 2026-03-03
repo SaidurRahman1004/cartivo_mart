@@ -53,7 +53,7 @@ class NetworkCaller {
   //Post
   Future<NetworkResponse> postRequest(
     String url, {
-    Map<String, String>? body,
+    Map<String, dynamic>? body,
   }) async {
     try {
       Uri uri = Uri.parse(url);
@@ -95,7 +95,7 @@ class NetworkCaller {
   }
 
   //log Request
-  void _logRequest(String url, {Map<String, String>? body}) {
+  void _logRequest(String url, {Map<String, dynamic>? body}) {
     _logger.i(
       'URL: $url\n'
       'Body: $body',
